@@ -12,7 +12,6 @@ import java.sql.Types;
 
 public final class SqlExecutorCallableStatement {
 
-
     /*
        create procedure add_pro(a int, b int, out sum int)
        begin

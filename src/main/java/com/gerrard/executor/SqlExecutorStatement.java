@@ -50,15 +50,4 @@ public final class SqlExecutorStatement<T> implements SqlExecutor<T> {
             throw new JdbcSampleException(ErrorCode.EXECUTE_QUERY_FAILURE, msg);
         }
     }
-
-    public long executeLargeUpdate(String sql) {
-        DriverLoader.loadSqliteDriver();
-        try (Connection conn = Connector.getSqlConnection();
-             Statement stmt = conn.createStatement()) {
-            return stmt.executeLargeUpdate(sql);
-        } catch (SQLException e) {
-            String msg = "ExecuteLargeUpdate failure.";
-            throw new JdbcSampleException(ErrorCode.EXECUTE_LARGE_UPDATE_FAILURE, msg);
-        }
-    }
 }

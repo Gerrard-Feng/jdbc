@@ -24,7 +24,7 @@ public final class InjectCase {
             System.out.println("Student [" + student1.getName() + "] login success.");
         }
 
-        // case 2, cracker login with PreparedStatement
+        // case 2, cracker login with Statement
         StudentLoginService service2 = new StatementLoginService();
         Student student2 = service2.login(id2, pass2);
         if (student2 == null) {
